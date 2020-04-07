@@ -1,0 +1,18 @@
+server:
+  port: 6000
+spring:
+  application:
+    name: gquik-config
+  cloud:
+    config:
+      server:
+        label: master
+        git:
+          uri: https://github.com/Gquik/public.git
+          search-paths: public
+          username: 123
+          password: 123
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:5000/eureka/
