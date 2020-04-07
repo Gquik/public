@@ -1,0 +1,9 @@
+server:
+  port: 5001
+spring:
+  application:
+    name: gquik-service1
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:5000/eureka/
