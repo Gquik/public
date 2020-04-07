@@ -5,9 +5,9 @@ eureka:
   instance:
     hostname: localhost
   client:
-    #是否向服务注册中心注册自己,默认为true
+    #false禁止自己当做服务注册
     register-with-eureka: false
-    #Eureka服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为。
+    #false屏蔽注册信息
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
