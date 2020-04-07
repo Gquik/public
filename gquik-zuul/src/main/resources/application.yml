@@ -1,0 +1,19 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: gquik-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:5000/eureka/
+zuul:
+  routes:
+    #http://localhost:8000/service1/gquik/hello
+    service1:
+      path: /service1/**
+      serviceId : gquik-service1
+    #http://localhost:8000/service2/gquik/hi
+    service2:
+      path: /service2/**
+      serviceId: gquik-service2
